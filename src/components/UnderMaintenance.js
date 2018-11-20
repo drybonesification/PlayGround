@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./UnderMaintenance.css";
 
 class AppU extends Component {
   render() {
