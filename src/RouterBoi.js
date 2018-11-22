@@ -5,6 +5,7 @@ import firebase from "firebase";
 import UnderMaintenance from "./components/UnderMaintenance";
 import Test from "./components/Test";
 import FireBaseTest from "./components/FireBaseTest";
+import TurkeyDayFun from "./components/TurkeyDayFun";
 
 var config = {
   apiKey: process.env.FIREBASE_apiKey
@@ -19,7 +20,8 @@ const RouterBoi = () => (
 
         <Route exact path="/" component={UnderMaintenance} />
         <Route path="/Test" component={Test} />
-        <Route exact path="/FireBaseTest" component={FireBaseTest} />
+        <Route path="/FireBaseTest" component={FireBaseTest} />
+        <Route path="/TurkeyDayFun" component={TurkeyDayFun} />
       </body>
     </Router>
   )
