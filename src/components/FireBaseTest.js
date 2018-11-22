@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import firebase from "firebase";
 
 class FireBaseTest extends Component {
   state = {
@@ -14,6 +15,18 @@ class FireBaseTest extends Component {
     });
   };
 
+  HandleSubmit = (event, email, password) => {
+    event.preventDefault();
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .catch(error => {
+        var errorCode = error.errorcode;
+        var errMessage = error.message;
+        console.log(errMessage, errorCode);
+      });
+  };
+
   LogBois = event => {
     event.preventDefault();
     console.log(this.state);
@@ -24,7 +37,7 @@ class FireBaseTest extends Component {
     return (
       <body class="bg-white" style={{ display: "flex", flexDirection: "row" }}>
         <article>
-          <form onSubmit={this.testSubmit}>
+          <form onSubmit={event => this.HandleSubmit(event, email.password)}>
             <fieldset>
               <fieldset>
                 <input
@@ -44,7 +57,12 @@ class FireBaseTest extends Component {
                   onChange={this.handleInputChange}
                 />
               </fieldset>
-              <button type="submit">Test</button>
+              <button
+                type="submit"
+                // onSubmit={event => this.HandleSubmit(event, email.password)}
+              >
+                Test
+              </button>
 
               <button type="button" onClick={event => this.LogBois(event)}>
                 Console State
