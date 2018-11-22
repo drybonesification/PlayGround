@@ -19,7 +19,7 @@ const RouterBoi = () => (
 
         <Route exact path="/" component={UnderMaintenance} />
         <Route path="/Test" component={Test} />
-        <Route path="/FireBaseTest" component={FireBaseTest} />
+        <Route exact path="/FireBaseTest" component={FireBaseTest} />
       </body>
     </Router>
   )
