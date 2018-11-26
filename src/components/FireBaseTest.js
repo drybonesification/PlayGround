@@ -15,8 +15,9 @@ class FireBaseTest extends Component {
     });
   };
 
-  HandleSubmit = (event, email, password) => {
+  HandleSubmit = event => {
     event.preventDefault();
+    const { email, password } = this.state;
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
@@ -29,7 +30,7 @@ class FireBaseTest extends Component {
 
   LogBois = event => {
     event.preventDefault();
-    console.log(process.env.REACT_APP_FIREBASE_apiKey);
+    console.log(this.state);
   };
 
   render() {
@@ -60,12 +61,7 @@ class FireBaseTest extends Component {
                   onChange={this.handleInputChange}
                 />
               </fieldset>
-              <button
-                type="submit"
-                // onSubmit={event => this.HandleSubmit(event, email.password)}
-              >
-                Test
-              </button>
+              <button type="submit">Test</button>
 
               <button type="button" onClick={event => this.LogBois(event)}>
                 Console State
