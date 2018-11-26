@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "tachyons";
 
-import App from "./App";
+import RouterBoi from "./RouterBoi";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<RouterBoi />, document.getElementById("root"));
