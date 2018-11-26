@@ -29,13 +29,16 @@ class FireBaseTest extends Component {
 
   LogBois = event => {
     event.preventDefault();
-    console.log(this.state);
+    console.log(process.env.REACT_APP_FIREBASE_apiKey);
   };
 
   render() {
     const { email, password } = this.state;
     return (
-      <body class="bg-white" style={{ display: "flex", flexDirection: "row" }}>
+      <body
+        className="bg-white"
+        style={{ display: "flex", flexDirection: "row" }}
+      >
         <article>
           <form onSubmit={event => this.HandleSubmit(event, email.password)}>
             <fieldset>
