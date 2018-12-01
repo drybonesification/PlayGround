@@ -4,8 +4,9 @@ import firebase from "firebase";
 
 import UnderMaintenance from "./AppScreens/UnderMaintenance";
 import Test from "./AppScreens/Test";
-import FireBaseTest from "./AppScreens/FireBaseTest";
+import UserScreen from "./AppScreens/UserScreen";
 import TurkeyDayFun from "./AppScreens/TurkeyDayFun";
+import Home from "./AppScreens/Home";
 require("dotenv").config();
 
 const config = {
@@ -22,10 +23,10 @@ const RouterBoi = () => (
   <Router>
     <div>
       {/* <Header /> */}
-
+      {/* <Route exact path="/" component={Home} /> */}
       <Route exact path="/" component={UnderMaintenance} />
       <Route path="/Test" component={Test} />
-      <Route path="/FireBaseTest" component={FireBaseTest} />
+      <Route path="/UserScreen" component={UserScreen} />
       <Route path="/TurkeyDayFun" component={TurkeyDayFun} />
     </div>
   </Router>

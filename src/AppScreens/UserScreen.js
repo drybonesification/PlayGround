@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import firebase from "firebase";
 
-class FireBaseTest extends Component {
+class UserScreen extends Component {
   state = {
-    email: "",
-    password: ""
+    LoginEmail: "",
+    LoginPassword: "",
+    RegisterEmail: "",
+    RegisterPassword: ""
   };
 
   handleInputChange = event => {
@@ -15,7 +17,7 @@ class FireBaseTest extends Component {
     });
   };
 
-  HandleSubmit = event => {
+  HandleRegister = event => {
     event.preventDefault();
     const { email, password } = this.state;
     firebase
@@ -27,6 +29,18 @@ class FireBaseTest extends Component {
         console.log(errMessage, errorCode);
       });
   };
+  HandleLogin = event => {
+    event.preventDefault();
+    const { email, password } = this.state;
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .catch(error => {
+        var errorCode = error.errorcode;
+        var errorMessage = error.message;
+        console.log(errorMessage, errorCode);
+      });
+  };
 
   LogBois = event => {
     event.preventDefault();
@@ -34,38 +48,72 @@ class FireBaseTest extends Component {
   };
 
   render() {
-    const { email, password } = this.state;
+    const {
+      RegisterEmail,
+      LoginEmail,
+      RegisterPassword,
+      LoginPassword
+    } = this.state;
     return (
       <body
         className="bg-white"
         style={{ display: "flex", flexDirection: "row" }}
       >
         <article>
-          <form onSubmit={event => this.HandleSubmit(event, email.password)}>
+          <form
+            onSubmit={event =>
+              this.HandleRegister(event, RegisterEmail, RegisterPassword)
+            }
+          >
             <fieldset>
               <fieldset>
                 <input
                   placeholder="email"
-                  value={email}
-                  name="email"
-                  type="email"
+                  value={RegisterEmail}
+                  name="RegisterEmail"
+                  type="RegisterEmail"
                   onChange={this.handleInputChange}
                 />
               </fieldset>
               <fieldset>
                 <input
                   placeholder="password"
-                  name="password"
-                  value={password}
-                  type="password"
+                  name="RegisterPassword"
+                  value={RegisterPassword}
+                  type="RegisterPassword"
                   onChange={this.handleInputChange}
                 />
               </fieldset>
-              <button type="submit">Test</button>
-
-              <button type="button" onClick={event => this.LogBois(event)}>
-                Console State
-              </button>
+              <button type="submit">Register</button>
+            </fieldset>
+          </form>
+        </article>
+        <article>
+          <form
+            onSubmit={event =>
+              this.HandleLogin(event, LoginEmail, LoginPassword)
+            }
+          >
+            <fieldset>
+              <fieldset>
+                <input
+                  placeholder="email"
+                  value={LoginEmail}
+                  name="LoginEmail"
+                  type="LoginEmail"
+                  onChange={this.handleInputChange}
+                />
+              </fieldset>
+              <fieldset>
+                <input
+                  placeholder="password"
+                  name="LoginPassword"
+                  value={LoginPassword}
+                  type="LoginPassword"
+                  onChange={this.handleInputChange}
+                />
+              </fieldset>
+              <button type="submit">Login</button>
             </fieldset>
           </form>
         </article>
@@ -74,7 +122,7 @@ class FireBaseTest extends Component {
   }
 }
 
-export default FireBaseTest;
+export default UserScreen;
 
 {
   /* <article class="mw5 center bg-dark-blue br3 pa3 pa4-ns mv3 ba b--black-10">

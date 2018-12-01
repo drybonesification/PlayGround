@@ -13,3 +13,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 3. Created file system for redux integration
 4. Created basic routing
 5. Renamed files
+6. created firebase via env file
+7. tested with simple register form
+8. set different state values for register and login

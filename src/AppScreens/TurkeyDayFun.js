@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./TurkeyDayFun.css";
+import "../Styles/TurkeyDayFun.css";
 
 class TurkeyDayFun extends Component {
   render() {

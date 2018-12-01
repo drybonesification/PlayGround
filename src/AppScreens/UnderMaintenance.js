@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./UnderMaintenance.css";
+import "../Styles/UnderMaintenance.css";
 
 class AppU extends Component {
   render() {
