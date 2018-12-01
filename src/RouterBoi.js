@@ -2,10 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import firebase from "firebase";
 
-import UnderMaintenance from "./components/UnderMaintenance";
-import Test from "./components/Test";
-import FireBaseTest from "./components/FireBaseTest";
-import TurkeyDayFun from "./components/TurkeyDayFun";
+import UnderMaintenance from "./AppScreens/UnderMaintenance";
+import Test from "./AppScreens/Test";
+import FireBaseTest from "./AppScreens/FireBaseTest";
+import TurkeyDayFun from "./AppScreens/TurkeyDayFun";
 require("dotenv").config();
 
 const config = {
