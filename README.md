@@ -16,3 +16,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 6. created firebase via env file
 7. tested with simple register form
 8. set different state values for register and login
+9. Started a simple router side menu

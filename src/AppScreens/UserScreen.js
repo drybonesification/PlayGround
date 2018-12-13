@@ -19,22 +19,35 @@ class UserScreen extends Component {
 
   HandleRegister = event => {
     event.preventDefault();
-    const { email, password } = this.state;
     firebase
       .auth()
-      .createUserWithEmailAndPassword(email, password)
+      .createUserWithEmailAndPassword(
+        this.state.RegisterEmail,
+        this.state.RegisterPassword
+      )
       .catch(error => {
         var errorCode = error.errorcode;
         var errMessage = error.message;
         console.log(errMessage, errorCode);
+      })
+      .then(loggedInUser => {
+        var LIU = loggedInUser;
+        console.log(loggedInUser._user);
+      })
+      .catch(error => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorMessage, errorCode);
       });
   };
   HandleLogin = event => {
     event.preventDefault();
-    const { email, password } = this.state;
     firebase
       .auth()
-      .signInWithEmailAndPassword(email, password)
+      .signInWithEmailAndPassword(
+        this.state.LoginEmail,
+        this.state.LoginPassword
+      )
       .catch(error => {
         var errorCode = error.errorcode;
         var errorMessage = error.message;
@@ -80,7 +93,7 @@ class UserScreen extends Component {
                   placeholder="password"
                   name="RegisterPassword"
                   value={RegisterPassword}
-                  type="RegisterPassword"
+                  type="Password"
                   onChange={this.handleInputChange}
                 />
               </fieldset>
@@ -109,7 +122,7 @@ class UserScreen extends Component {
                   placeholder="password"
                   name="LoginPassword"
                   value={LoginPassword}
-                  type="LoginPassword"
+                  type="Password"
                   onChange={this.handleInputChange}
                 />
               </fieldset>
@@ -117,6 +130,8 @@ class UserScreen extends Component {
             </fieldset>
           </form>
         </article>
+
+        <button onClick={this.LogBois}>Log</button>
       </body>
     );
   }

@@ -18,6 +18,9 @@ const config = {
   messagingSenderId: process.env.REACT_APP_FIREBASE_messagingSenderId
 };
 firebase.initializeApp(config);
+const firestore = firebase.firestore();
+const settings = { timestampsInSnapshots: true };
+firestore.settings(settings);
 
 const RouterBoi = () => (
   <Router>
