@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import firebase from "firebase";
 
-class UserScreen extends Component {
+class LoginAndRegister extends Component {
   state = {
     LoginEmail: "",
     LoginPassword: "",
@@ -29,16 +29,8 @@ class UserScreen extends Component {
         var errorCode = error.errorcode;
         var errMessage = error.message;
         console.log(errMessage, errorCode);
-      })
-      .then(loggedInUser => {
-        var LIU = loggedInUser;
-        console.log(loggedInUser._user);
-      })
-      .catch(error => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log(errorMessage, errorCode);
       });
+    //then create the dnd data
   };
   HandleLogin = event => {
     event.preventDefault();
@@ -53,6 +45,7 @@ class UserScreen extends Component {
         var errorMessage = error.message;
         console.log(errorMessage, errorCode);
       });
+    //recieve dnd information/user info
   };
 
   LogBois = event => {
@@ -99,6 +92,7 @@ class UserScreen extends Component {
               </fieldset>
               <button type="submit">Register</button>
             </fieldset>
+            {/* option to have dnd room input */}
           </form>
         </article>
         <article>
@@ -137,33 +131,4 @@ class UserScreen extends Component {
   }
 }
 
-export default UserScreen;
-
-{
-  /* <article class="mw5 center bg-dark-blue br3 pa3 pa4-ns mv3 ba b--black-10">
-          <div class="tc">
-            <img
-              src="http://tachyons.io/img/avatar_1.jpg"
-              class="br-100 h3 w3 dib"
-              title="Photo of a kitty staring at you"
-            />
-            <h1 class="f4">apollo</h1>
-            <hr class="mw3 bb bw1 b--black-10" />
-          </div>
-          <p class="lh-copy measure center f6 black-70">Pain in the butt</p>
-        </article>
-        <article class="mw5 center bg-dark-blue br3 pa3 pa4-ns mv3 ba b--black-10">
-          <div class="tc">
-            <img
-              src="http://tachyons.io/img/avatar_1.jpg"
-              class="br-100 h3 w3 dib"
-              title="Photo of a kitty staring at you"
-            />
-            <h1 class="f4">bob</h1>
-            <hr class="mw3 bb bw1 b--black-10" />
-          </div>
-          <p class="lh-copy measure center f6 black-70">
-            this is a sample sentance
-          </p>
-        </article> */
-}
+export default LoginAndRegister;
