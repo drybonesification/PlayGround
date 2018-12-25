@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../Styles/UnderMaintenance.css";
 
-class AppU extends Component {
+class UnderMaintenance extends Component {
   render() {
     return (
       <body
@@ -24,4 +24,4 @@ class AppU extends Component {
   }
 }
 
-export default AppU;
+export default UnderMaintenance;

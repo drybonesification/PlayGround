@@ -2,10 +2,12 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import firebase from "firebase";
 
+// import Header from "./AppScreens/components/Header";
 import UnderMaintenance from "./AppScreens/UnderMaintenance";
 import Test from "./AppScreens/Test";
 import LoginAndRegister from "./AppScreens/LoginAndRegister";
-import TurkeyDayFun from "./AppScreens/TurkeyDayFun";
+import TurkeyDay2018 from "./AppScreens/TurkeyDay2018";
+import Christmas2018 from "./AppScreens/Christmas2018";
 import Home from "./AppScreens/Home";
 require("dotenv").config();
 
@@ -30,7 +32,8 @@ const RouterBoi = () => (
       <Route exact path="/" component={UnderMaintenance} />
       <Route path="/Test" component={Test} />
       <Route path="/LoginAndRegister" component={LoginAndRegister} />
-      <Route path="/TurkeyDayFun" component={TurkeyDayFun} />
+      <Route path="/TurkeyDay2018" component={TurkeyDay2018} />
+      <Route path="/Christmas2018" component={Christmas2018} />
     </div>
   </Router>
 );
