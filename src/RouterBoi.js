@@ -9,6 +9,7 @@ import LoginAndRegister from "./AppScreens/LoginAndRegister";
 import TurkeyDay2018 from "./AppScreens/TurkeyDay2018";
 import Christmas2018 from "./AppScreens/Christmas2018";
 import Home from "./AppScreens/Home";
+import RainyDays from "./AppScreens/RainyDays";
 require("dotenv").config();
 
 const config = {
@@ -34,6 +35,7 @@ const RouterBoi = () => (
       <Route path="/LoginAndRegister" component={LoginAndRegister} />
       <Route path="/TurkeyDay2018" component={TurkeyDay2018} />
       <Route path="/Christmas2018" component={Christmas2018} />
+      <Route path="/RainyDays" component={RainyDays} />
     </div>
   </Router>
 );
