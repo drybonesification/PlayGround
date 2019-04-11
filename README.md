@@ -17,3 +17,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 7. tested with simple register form
 8. set different state values for register and login
 9. Started a simple router side menu
+10. Renamed to match the kind of content that will be implimented/made here
+11. Made a simple text "encoder" based off provided json/jsons in ...components/encoders
