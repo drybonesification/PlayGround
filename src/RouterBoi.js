@@ -2,10 +2,15 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import firebase from "firebase";
 
-import UnderMaintenance from "./components/UnderMaintenance";
-import Test from "./components/Test";
-import FireBaseTest from "./components/FireBaseTest";
-import TurkeyDayFun from "./components/TurkeyDayFun";
+// import Header from "./AppScreens/components/Header";
+import UnderMaintenance from "./AppScreens/UnderMaintenance";
+import Test from "./AppScreens/Test";
+import LoginAndRegister from "./AppScreens/LoginAndRegister";
+import TurkeyDay2018 from "./AppScreens/TurkeyDay2018";
+import Christmas2018 from "./AppScreens/Christmas2018";
+import Home from "./AppScreens/Home";
+import RainyDays from "./AppScreens/RainyDays";
+import Encoder from "./AppScreens/Encoder";
 require("dotenv").config();
 
 const config = {
@@ -17,16 +22,22 @@ const config = {
   messagingSenderId: process.env.REACT_APP_FIREBASE_messagingSenderId
 };
 firebase.initializeApp(config);
+const firestore = firebase.firestore();
+const settings = { timestampsInSnapshots: true };
+firestore.settings(settings);
 
 const RouterBoi = () => (
   <Router>
     <div>
       {/* <Header /> */}
-
+      {/* <Route exact path="/" component={Home} /> */}
       <Route exact path="/" component={UnderMaintenance} />
       <Route path="/Test" component={Test} />
-      <Route path="/FireBaseTest" component={FireBaseTest} />
-      <Route path="/TurkeyDayFun" component={TurkeyDayFun} />
+      <Route path="/LoginAndRegister" component={LoginAndRegister} />
+      <Route path="/TurkeyDay2018" component={TurkeyDay2018} />
+      <Route path="/Christmas2018" component={Christmas2018} />
+      <Route path="/RainyDays" component={RainyDays} />
+      <Route path="/Encoder" component={Encoder} />
     </div>
   </Router>
 );

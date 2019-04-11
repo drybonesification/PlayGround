@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./TurkeyDayFun.css";
+import "../Styles/TurkeyDay2018.css";
 
-class TurkeyDayFun extends Component {
+class TurkeyDay2018 extends Component {
   render() {
     return (
       <body
@@ -42,4 +42,4 @@ class TurkeyDayFun extends Component {
   }
 }
 
-export default TurkeyDayFun;
+export default TurkeyDay2018;
