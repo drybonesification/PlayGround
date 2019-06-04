@@ -7,7 +7,7 @@ class LoginAndRegister extends Component {
     LoginPassword: "",
     RegisterEmail: "",
     RegisterPassword: ""
-  };
+  }; //creating empty local state for passing props, will later be pushed using redux
 
   handleInputChange = event => {
     const targetName = event.target.name;
@@ -15,7 +15,7 @@ class LoginAndRegister extends Component {
     this.setState({
       [targetName]: event.target.value
     });
-  };
+  }; // handle changes in the input feilds
 
   HandleRegister = event => {
     event.preventDefault();
@@ -31,7 +31,7 @@ class LoginAndRegister extends Component {
         console.log(errMessage, errorCode);
       });
     //then create the dnd data
-  };
+  }; //Creates a registered user via firebase
   HandleLogin = event => {
     event.preventDefault();
     firebase
@@ -46,12 +46,12 @@ class LoginAndRegister extends Component {
         console.log(errorMessage, errorCode);
       });
     //recieve dnd information/user info
-  };
+  }; //Signs registered user in, no redirect yet
 
   LogBois = event => {
     event.preventDefault();
     console.log(this.state);
-  };
+  }; //for dev purposes
 
   render() {
     const {
@@ -130,5 +130,7 @@ class LoginAndRegister extends Component {
     );
   }
 }
+
+//creates very basic login/register page
 
 export default LoginAndRegister;

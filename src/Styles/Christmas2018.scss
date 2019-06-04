@@ -15,19 +15,15 @@ $bg: #0c1e42;
   background-color: $bg;
   background-position: 0 0,
     // leaves-top
-
       $size/2$size/2.5,
     $size/2 $size/2.5,
     // leaves-middle
-
       $size/2$size/1.8,
     $size/2 $size/1.8,
     // leaves-bottom
-
       $size/2$size/1.4,
     $size/2 $size/1.4,
     // trunk
-
       $size/2$size/1.25,
     $size/2 $size/1.25;
 
@@ -85,3 +81,5 @@ $bg: #0c1e42;
     }
   }
 }
+
+/* style sheet for animation on christmas screen */

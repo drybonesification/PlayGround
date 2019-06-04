@@ -43,4 +43,6 @@ class Christmas2018 extends Component {
   }
 }
 
+// Handing mostly empty elements to then be styled
+
 export default Christmas2018;

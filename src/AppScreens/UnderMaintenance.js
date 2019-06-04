@@ -17,7 +17,8 @@ class UnderMaintenance extends Component {
         }}
       >
         <div className="UnderMaintenance">
-          <span>Under Maintenance...</span>
+          <span>Under Maintenance...</span> //used for the style to have it say
+          something, in this case UnderMaintenance
         </div>
       </body>
     );

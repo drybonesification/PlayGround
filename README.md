@@ -6,7 +6,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ---
 
-# 8-N3Znetwork
+# Playground
 
 1. Set up an undermaintenance screen
 2. Start to scaffold the website
@@ -19,3 +19,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 9. Started a simple router side menu
 10. Renamed to match the kind of content that will be implimented/made here
 11. Made a simple text "encoder" based off provided json/jsons in ...components/encoders
+12. 11-is a WIP, code named playground now
+13. Documented what things are doing

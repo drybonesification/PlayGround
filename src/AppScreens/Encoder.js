@@ -52,4 +52,6 @@ class Encoder extends Component {
   }
 }
 
+//WIP
+
 export default Encoder;

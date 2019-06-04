@@ -42,4 +42,6 @@ class TurkeyDay2018 extends Component {
   }
 }
 
+//Page baseically just handing empty elements to a style sheet making the turkey
+
 export default TurkeyDay2018;
