@@ -1,5 +1,6 @@
 import React from "react";
+import {StyledDisplay} from './TetrisStyles/StyledDisplay'
 
-const Display = ({ gameover, text }) => <div>{text}</div>;
+const Display = ({ gameOver, text }) => <StyledDisplay gameOver={gameOver} >{text}</StyledDisplay>;
 
 export default Display;
