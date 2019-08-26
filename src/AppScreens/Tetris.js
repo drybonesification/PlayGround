@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Game from "./components/tetris/tetris";
+import Game from "./components/tetris/Game";
 
 class Tetris extends Component {
   render() {
