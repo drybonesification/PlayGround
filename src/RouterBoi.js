@@ -11,6 +11,7 @@ import Christmas2018 from "./AppScreens/Christmas2018";
 import Home from "./AppScreens/Home";
 import RainyDays from "./AppScreens/RainyDays";
 import Encoder from "./AppScreens/Encoder";
+import Tetris from "./AppScreens/Tetris";
 require("dotenv").config();
 
 //Handing the keys to firebase
@@ -38,8 +39,9 @@ const RouterBoi = () => (
       <Route path="/TurkeyDay2018" component={TurkeyDay2018} />
       <Route path="/Christmas2018" component={Christmas2018} />
       <Route path="/RainyDays" component={RainyDays} />
-      <Route path="/Encoder" component={Encoder} /> //"links" to each place ex:
-      mywebsite.com/Encoder
+      <Route path="/Encoder" component={Encoder} />
+      <Route path="/Tetris" component={Tetris} />
+      {/* //"links" to each place ex: mywebsite.com/Encoder */}
     </div>
   </Router> // Tells browser where to go
 );
