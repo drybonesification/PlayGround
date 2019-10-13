@@ -12,6 +12,7 @@ import Home from "./AppScreens/Home";
 import RainyDays from "./AppScreens/RainyDays";
 import Encoder from "./AppScreens/Encoder";
 import Tetris from "./AppScreens/Tetris";
+import DataBasePOC from './AppScreens/DataBasePOC'
 require("dotenv").config();
 
 //Handing the keys to firebase
@@ -41,6 +42,7 @@ const RouterBoi = () => (
       <Route path="/RainyDays" component={RainyDays} />
       <Route path="/Encoder" component={Encoder} />
       <Route path="/Tetris" component={Tetris} />
+      <Route path="/DataBasePOC" component={DataBasePOC} />
       {/* //"links" to each place ex: mywebsite.com/Encoder */}
     </div>
   </Router> // Tells browser where to go

@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "tachyons";
+import 'materialize-css/dist/css/materialize.min.css'
 
 import RouterBoi from "./RouterBoi";
 

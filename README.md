@@ -21,3 +21,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 11. Made a simple text "encoder" based off provided json/jsons in ...components/encoders
 12. 11-is a WIP, code named playground now
 13. Documented what things are doing
+14. Had a bad day at work so decided to make a better version of something i stare at all day, DatabasePOC started
+15. Layed basic rerender for the POC rather then full nav
