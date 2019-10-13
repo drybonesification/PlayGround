@@ -12,7 +12,7 @@ import Home from "./AppScreens/Home";
 import RainyDays from "./AppScreens/RainyDays";
 import Encoder from "./AppScreens/Encoder";
 import Tetris from "./AppScreens/Tetris";
-import DataBasePOC from './AppScreens/DataBasePOC'
+import DataBasePOC from './AppScreens/POC-Database/DataBasePOC'
 require("dotenv").config();
 
 //Handing the keys to firebase
