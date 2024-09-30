@@ -1,35 +1,26 @@
 {
-  "name": "8-n3znetwork",
+  "name": "playground",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "dotenv": "^6.1.0",
-    "firebase": "^5.5.9",
-    "history": "^4.7.2",
-    "node-sass": "^7.0.0",
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2",
-    "react-icons-kit": "^1.2.1",
-    "react-redux": "^5.1.0",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.1.5",
-    "redux": "^4.0.1",
-    "tachyons": "^4.11.1"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.2.13"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.13"
+  }
 }
