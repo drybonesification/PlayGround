@@ -13,7 +13,7 @@ class UnderMaintenance extends Component {
           "align-items": "center",
           height: "100vh",
           "font-family": "sans-serif",
-          background: "#000000"
+          background: "#000000",
         }}
       >
         <div className="UnderMaintenance">
