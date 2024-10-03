@@ -1,5 +1,6 @@
+"use client";
 import React, { Component } from "react";
-import "../Styles/Christmas2018.scss";
+import "../../Styles/Christmas2018.scss";
 
 class Christmas2018 extends Component {
   render() {
@@ -14,7 +15,7 @@ class Christmas2018 extends Component {
           "align-items": "center",
           height: "100vh",
           "font-family": "sans-serif",
-          background: "#575757"
+          background: "#575757",
         }}
       >
         <div
@@ -35,7 +36,7 @@ class Christmas2018 extends Component {
           linear-gradient(60deg, #6d9839 12%, transparent 12.5%),
           linear-gradient(-60deg, #699237 12%, transparent 12.5%),
           linear-gradient(80deg, #855726 5%, transparent 5.5%),
-          linear-gradient(-80deg, #7f5324 5%, transparent 5.5%)`
+          linear-gradient(-80deg, #7f5324 5%, transparent 5.5%)`,
           }}
         />
       </body>

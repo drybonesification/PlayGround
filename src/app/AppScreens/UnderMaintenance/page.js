@@ -1,5 +1,6 @@
+"use client";
 import React, { Component } from "react";
-import "../Styles/UnderMaintenance.css";
+import "../../Styles/UnderMaintenance.css";
 
 class UnderMaintenance extends Component {
   render() {

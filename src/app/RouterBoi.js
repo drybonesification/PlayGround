@@ -1,16 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 // import firebase from "firebase";
 
 // import Header from "./AppScreens/components/Header";
-import UnderMaintenance from "./AppScreens/UnderMaintenance";
+import UnderMaintenance from "./AppScreens/UnderMaintenance/page";
 import Test from "./AppScreens/Test";
 // import LoginAndRegister from "./AppScreens/LoginAndRegister";
-import TurkeyDay2018 from "./AppScreens/TurkeyDay2018";
-import Christmas2018 from "./AppScreens/Christmas2018";
+import TurkeyDay2018 from "./AppScreens/TurkeyDay2018/TurkeyDay2018";
+import Christmas2018 from "./AppScreens/Christmas2018/page";
 // import Home from "./AppScreens/Home";
-import RainyDays from "./AppScreens/RainyDays";
-import Encoder from "./AppScreens/Encoder";
+import RainyDays from "./AppScreens/RainyDays/RainyDays";
+import Encoder from "./AppScreens/Encoder/Encoder";
 // require("dotenv").config();
 
 // const config = {
