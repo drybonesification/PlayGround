@@ -1,5 +1,7 @@
+"use client";
+
 import React, { Component } from "react";
-import "../Styles/RainyDays.scss";
+import "../../Styles/RainyDays.scss";
 
 class RainyDays extends Component {
   render() {
@@ -12,11 +14,11 @@ class RainyDays extends Component {
               margin: 0,
               padding: 0,
               display: "flex",
-              "justify-content": "center",
-              "align-items": "center",
+              justifyContent: "center",
+              alignItems: "center",
               height: "100vh",
-              "font-family": "sans-serif",
-              background: "#575757"
+              fontFamily: "sans-serif",
+              background: "#575757",
             }}
           />
         </div>

@@ -1,18 +1,20 @@
+"use client";
+
 import React, { Component } from "react";
 
 class Encoder extends Component {
   state = {
     Pre_Encode: "",
-    Post_Encode: "Endcoded text will be here"
+    Post_Encode: "Endcoded text will be here",
   };
   ConsoleBoi = () => {
     console.log(this.state);
   };
 
-  handleinput = event => {
+  handleinput = (event) => {
     const targetName = event.target.name;
     this.setState({
-      [targetName]: event.target.value
+      [targetName]: event.target.value,
     });
   };
 

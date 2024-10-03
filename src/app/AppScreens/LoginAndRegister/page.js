@@ -1,23 +1,24 @@
+"use client";
 import React, { Component } from "react";
-import firebase from "firebase";
+import firebase from "firebase/compat/app";
 
 class LoginAndRegister extends Component {
   state = {
     LoginEmail: "",
     LoginPassword: "",
     RegisterEmail: "",
-    RegisterPassword: ""
+    RegisterPassword: "",
   };
 
-  handleInputChange = event => {
+  handleInputChange = (event) => {
     const targetName = event.target.name;
 
     this.setState({
-      [targetName]: event.target.value
+      [targetName]: event.target.value,
     });
   };
 
-  HandleRegister = event => {
+  HandleRegister = (event) => {
     event.preventDefault();
     firebase
       .auth()
@@ -25,14 +26,14 @@ class LoginAndRegister extends Component {
         this.state.RegisterEmail,
         this.state.RegisterPassword
       )
-      .catch(error => {
+      .catch((error) => {
         var errorCode = error.errorcode;
         var errMessage = error.message;
         console.log(errMessage, errorCode);
       });
     //then create the dnd data
   };
-  HandleLogin = event => {
+  HandleLogin = (event) => {
     event.preventDefault();
     firebase
       .auth()
@@ -40,7 +41,7 @@ class LoginAndRegister extends Component {
         this.state.LoginEmail,
         this.state.LoginPassword
       )
-      .catch(error => {
+      .catch((error) => {
         var errorCode = error.errorcode;
         var errorMessage = error.message;
         console.log(errorMessage, errorCode);
@@ -48,18 +49,14 @@ class LoginAndRegister extends Component {
     //recieve dnd information/user info
   };
 
-  LogBois = event => {
+  LogBois = (event) => {
     event.preventDefault();
     console.log(this.state);
   };
 
   render() {
-    const {
-      RegisterEmail,
-      LoginEmail,
-      RegisterPassword,
-      LoginPassword
-    } = this.state;
+    const { RegisterEmail, LoginEmail, RegisterPassword, LoginPassword } =
+      this.state;
     return (
       <body
         className="bg-white"
@@ -67,7 +64,7 @@ class LoginAndRegister extends Component {
       >
         <article>
           <form
-            onSubmit={event =>
+            onSubmit={(event) =>
               this.HandleRegister(event, RegisterEmail, RegisterPassword)
             }
           >
@@ -97,7 +94,7 @@ class LoginAndRegister extends Component {
         </article>
         <article>
           <form
-            onSubmit={event =>
+            onSubmit={(event) =>
               this.HandleLogin(event, LoginEmail, LoginPassword)
             }
           >
